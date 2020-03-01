@@ -17,7 +17,7 @@
     "tyrian"
   ],
   "scripts": {
-        "prepare": "npm run dist"
+        "prepare": "npm install"
   },
   "dependencies": {
     "@gentoo/tyrian": "git+https://anongit.gentoo.org/git/sites/tyrian-theme.git",
