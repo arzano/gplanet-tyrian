@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Planet Gentoo</title>
+  <meta name="theme-color" content="#54487a">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:title" content="Planet Gentoo">
+  <meta property="og:image" content="https://www.gentoo.org/assets/img/logo/gentoo-g.png">
+  <meta name="twitter:image" content="https://www.gentoo.org/assets/img/logo/gentoo-g.png">
+  <link rel="apple-touch-icon" href="https://www.gentoo.org/assets/img/logo/icon-192.png">
+  <link rel="icon" sizes="192x192" href="https://www.gentoo.org/assets/img/logo/icon-192.png">
+
+  <%= stylesheet_link_tag 'tyrian/tyrian.min' %>
+  <%= stylesheet_link_tag 'tyrian/components/searchbars.min' %>
+  <%= stylesheet_link_tag 'tyrian/planet-tyrian' %>
+  <%= stylesheet_link_tag 'tyrian/components/bootstrap-datepicker.standalone' %>
+
+  <link rel="icon" href="https://planet.gentoo.org/favicon.ico" type="image/x-icon">
+  <link rel="search" type="application/opensearchdescription+xml" href="https://www.gentoo.org/search/www-gentoo-org.xml" title="Gentoo Website">
+  <link rel="search" type="application/opensearchdescription+xml" href="https://www.gentoo.org/search/forums-gentoo-org.xml" title="Gentoo Forums">
+  <link rel="search" type="application/opensearchdescription+xml" href="https://www.gentoo.org/search/bugs-gentoo-org.xml" title="Gentoo Bugzilla">
+  <link rel="search" type="application/opensearchdescription+xml" href="https://www.gentoo.org/search/packages-gentoo-org.xml" title="Gentoo Packages">
+  <link rel="search" type="application/opensearchdescription+xml" href="https://www.gentoo.org/search/archives-gentoo-org.xml" title="Gentoo List Archives">
+  <link rel="alternate" type="application/rss+xml" title="Planet Gentoo" href="https://planet.gentoo.org/universe/rss20.xml">
+  <link rel="alternate" type="application/atom+xml" title="Planet Gentoo" href="https://planet.gentoo.org/universe/atom.xml">
+
+
+</head>
+<body>
+
+<header>
+  <div class="site-title">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="logo">
+          <a href="/" title="Back to the homepage" class="site-logo">
+            <img src="tyrian/site-logo.png" alt="Gentoo" srcset="tyrian/site-logo.svg">
+          </a>
+          <span class="site-label">Planet</span>
+        </div>
+        <div class="site-title-buttons">
+          <div class="btn-group btn-group-sm">
+            <a href="https://get.gentoo.org/" role="button" class="btn get-gentoo"><span class="fa fa-fw fa-download"></span>
+              <strong>Get Gentoo!</strong></a>
+            <div class="btn-group btn-group-sm">
+              <a class="btn gentoo-org-sites dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
+                <span class="fa fa-fw fa-map-o"></span> <span class="d-none d-sm-inline">gentoo.org sites</span>
+                <span class="caret"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="https://www.gentoo.org/" title="Main Gentoo website"><span class="fa fa-home fa-fw"></span>
+                  gentoo.org</a>
+                <a class="dropdown-item" href="https://wiki.gentoo.org/" title="Find and contribute documentation"><span class="fa fa-file-text-o fa-fw"></span>
+                  Wiki</a>
+                <a class="dropdown-item" href="https://bugs.gentoo.org/" title="Report issues and find common issues"><span class="fa fa-bug fa-fw"></span>
+                  Bugs</a>
+                <a class="dropdown-item" href="https://forums.gentoo.org/" title="Discuss with the community"><span class="fa fa-comments-o fa-fw"></span>
+                  Forums</a>
+                <a class="dropdown-item" href="https://packages.gentoo.org/" title="Find software for your Gentoo"><span class="fa fa-hdd-o fa-fw"></span>
+                  Packages</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://planet.gentoo.org/" title="Find out what's going on in the developer community"><span class="fa fa-rss fa-fw"></span>
+                  Planet</a>
+                <a class="dropdown-item" href="https://archives.gentoo.org/" title="Read up on past discussions"><span class="fa fa-archive fa-fw"></span>
+                  Archives</a>
+                <a class="dropdown-item" href="https://sources.gentoo.org/" title="Browse our source code"><span class="fa fa-code fa-fw"></span>
+                  Sources</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://infra-status.gentoo.org/" title="Get updates on the services provided by Gentoo"><span class="fa fa-server fa-fw"></span>
+                  Infra Status</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="tyrian-navbar navbar navbar-dark navbar-expand-lg bg-primary" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse navbar-main-collapse" id="navbar-main-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item active"><a class="nav-link" href="search.html">Search</a></li>
+          <li class="nav-item"><a class="nav-link" href="contributors.html">Contributors</a></li>
+        </ul>
+
+        <form class="form-inline inlinesearch mr-2" role="search" action="search.html" method="get">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+            </div>
+            <input class="form-control" type="text" name="q" type="text" placeholder="Quicksearch" aria-label="Find Packages">
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<div class="container">
+  <div class="row">
+
+
+    <div id="content" class="col-md-9">
+
+      <div class="page-header" style="border-bottom: none!important;padding-bottom: 10px!important;margin-top:0px!important;">
+        <h1>Welcome to the archive<br>
+          <small> please select a date range to view the articles that have been published in that time </small></h1>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+          <div class="input-daterange input-group" id="datepicker">
+            <input id="start" type="text" class="input-sm form-control" name="start" placeholder="start date"/>
+            <span class="input-group-addon">to</span>
+            <input id="end" type="text" class="input-sm form-control" name="end" placeholder="end date"/>
+          </div>
+
+        </div>
+        <div class="col-sm-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- Split button -->
+          <div class="btn-group pull-right">
+            <button type="button" onclick="updateArchive(true);" class="btn btn-primary">Search in Planet</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a onclick="updateArchive(false);" style="cursor: pointer;">Search in Universe</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+
+      <hr style="margin-top:30px;margin-bottom:30px;"/>
+
+      <div id="greeter">
+        <div class="row">
+          <div class="col-sm-12">
+            <!-- TODO(arzano) add a placeholder here -->
+          </div>
+        </div>
+      </div>
+
+      <div id="articles">
+        <!-- Selected articles will be displayed here -->
+      </div>
+
+      <div id="spinner" class="d-none">
+
+        <div class="row" style="margin-top:100px;">
+          <div class="col-sm-12" style="text-align: center;">
+            <i class="fa fa-spinner fa-pulse fa-5x fa-fw" style="color:#3E355A;"></i>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-offset-2 col-md-7">
+        <h3 class="footerhead">Gentoo Planet</h3>
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <strong>Last
+              Updated:</strong><br><span class="kk-i18n-date" title="<%= site.fetched %>"><%= site.fetched %></span>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <strong>Powered by:</strong><br><%= link_to 'Powered by Pluto', 'https://github/feedreader' %>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <!--
+            TBD
+            -->
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <h3 class="footerhead">Questions or comments?</h3>
+        Please feel free to <a href="https://wiki.gentoo.org/wiki/Project:Planet">contact us</a>.
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3 col-md-2">
+        <ul class="footerlinks three-icons">
+          <li>
+            <a href="https://twitter.com/gentoo" title="@Gentoo on Twitter"><span class="fa fa-twitter fa-fw"></span></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/gentoo.org" title="Gentoo on Facebook"><span class="fa fa-facebook fa-fw"></span></a>
+          </li>
+          <li></li>
+        </ul>
+        <div>
+          <div class="sitemap text-center">
+            <a href="https://wiki.gentoo.org/wiki/Foundation:Privacy_Policy">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-9 col-md-9">
+        <strong>© 2001–2020 Gentoo Foundation, Inc.</strong><br>
+        <small>
+          Gentoo is a trademark of the Gentoo Foundation, Inc.
+          The contents of this document, unless otherwise expressly stated, are licensed under the
+          <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">CC-BY-SA-4.0</a> license.
+          The
+          <a href="https://www.gentoo.org/inside-gentoo/foundation/name-logo-guidelines.html">Gentoo Name and Logo Usage
+            Guidelines</a> apply.
+        </small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="tyrian/jquery-3.3.slim.js"></script>
+<script src="tyrian/popper.min.js"></script>
+<script src="tyrian/bootstrap.min.js"></script>
+<script src="tyrian/components/bootstrap-datepicker.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+div.dateheading {
+  background-color: #54487a;
+  color: #FFFFFF;
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 3px 3px 3px 5px;
+}
+
+div.entryheading {
+  background-color: #EFEFEF;
+}
+
+span.entryheading {
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+div.entrycontent {
+  padding-left: 15px;
+  padding-bottom: 10px;
+  min-height: 85px;
+}
+
+div.entrycontent pre {
+  overflow: auto;
+}
+
+div.personheading {
+  background-color: #DEE3E7;
+}
+
+span.personheading {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-left: 8px;
+}
+
+span.commentlink {
+  font-style: italic;
+}
+.altmenu {
+  font-size: 0.8em;
+  font-weight: bold;
+  /*	font-family: Verdana, Arial, Helvetica; */
+  color: #000000;
+  padding-left: 2.0em;
+  padding-right: 1.0em;
+}
+
+pre {
+  /*	padding: 0.5em; */
+  /*	font-family: Lucida Console, Courier; */
+  color: #000000;
+  font-size: 0.9em;
+  border-left: 2px double grey;
+}
+
+img {
+  border: 0px;
+  max-width: 500px;
+  height: auto;
+}
+
+blockquote {
+  overflow: auto;
+}
+
+
+
+@media (min-width: 768px) {
+  .row.equal {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* Keep the footer at the bottom
+body {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding-bottom: 215px;
+}
+footer {
+  position: absolute;
+  margin-top: 40px;
+  bottom: 0;
+  width: 100%;
+}
+*/
+
+
+.d-none {
+  display:none;
+}
+
+
+.page-header > h1 {
+    margin-top: 25px;
+}
+
+
+.page-header > h1 {
+    line-height: 1.0;
+}
+
+.page-header > h1 > small {
+    font-size: 65%;
+}
+
+
+input[type="checkbox"] + .fa,
+input[type="checkbox"] + label > .fa,
+input[type="radio"] + .fa,
+input[type="radio"] + label > .fa { cursor: pointer; }
+
+/* Unchecked */
+input[type="radio"] + label { color: grey; }
+
+input[type="radio"] + .fa-circle:before,
+input[type="radio"] + label > .fa-circle:before { content: "\f0ac"; color: grey; }
+
+input[type="radio"] + .fa-newspaper:before,
+input[type="radio"] + label > .fa-newspaper:before { content: "\f1ea"; color: grey; }
+
+/* Checked */
+input[type="radio"]:checked + label { color: black; }
+
+input[type="radio"]:checked + .fa-circle:before,
+input[type="radio"]:checked + label > .fa-circle:before { content: "\f0ac"; color: black; }
+
+input[type="radio"]:checked + .fa-newspaper:before,
+input[type="radio"]:checked + label > .fa-newspaper:before { content: "\f1ea"; color: black; }
+
+

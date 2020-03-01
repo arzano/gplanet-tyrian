@@ -1,0 +1,23 @@
+{
+  "name": "planet-tyrian",
+  "version": "0.1.0",
+  "description": "tyrian - planet template pack",
+  "author": "Max Magorsch",
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://anongit.gentoo.org/git/sites/planet-tyrian.git"
+  },
+  "keywords": [
+    "planet",
+    "pluto",
+    "blank",
+    "planet-templates",
+    "gentoo",
+    "tyrian"
+  ],
+  "dependencies": {
+    "@gentoo/tyrian": "git+https://anongit.gentoo.org/git/sites/tyrian-theme.git",
+    "bootstrap-datepicker": "^1.9.0"
+  }
+}
