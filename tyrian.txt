@@ -6,32 +6,32 @@ contributors.html        tyrian-contributors.html.erb
 data.html        data.html.erb
 
 
-tyrian/tyrian.min.css        node_modules/@gentoo/tyrian/dist/tyrian.min.css
-tyrian/tyrian.min.css.map        node_modules/@gentoo/tyrian/dist/tyrian.min.css.map
-tyrian/components/searchbars.min.css        node_modules/@gentoo/tyrian/dist/components/searchbars.min.css
-tyrian/components/bootstrap-datepicker.standalone.css        node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.css
+tyrian/tyrian.min.css        ../@gentoo/tyrian/dist/tyrian.min.css
+tyrian/tyrian.min.css.map        ../@gentoo/tyrian/dist/tyrian.min.css.map
+tyrian/components/searchbars.min.css        ../@gentoo/tyrian/dist/components/searchbars.min.css
+tyrian/components/bootstrap-datepicker.standalone.css        ../bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.css
 
-tyrian/znurt.svg        node_modules/@gentoo/tyrian/dist/znurt.svg
-tyrian/black-thing.svg        node_modules/@gentoo/tyrian/dist/black-thing.svg
-tyrian/site-logo.svg        node_modules/@gentoo/tyrian/dist/site-logo.svg
-tyrian/site-logo.png        node_modules/@gentoo/tyrian/dist/site-logo.png
+tyrian/znurt.svg        ../@gentoo/tyrian/dist/znurt.svg
+tyrian/black-thing.svg        ../@gentoo/tyrian/dist/black-thing.svg
+tyrian/site-logo.svg        ../@gentoo/tyrian/dist/site-logo.svg
+tyrian/site-logo.png        ../@gentoo/tyrian/dist/site-logo.png
 
-tyrian/fontawesome-webfont.eot        node_modules/@gentoo/tyrian/dist/fontawesome-webfont.eot
-tyrian/fontawesome-webfont.svg        node_modules/@gentoo/tyrian/dist/fontawesome-webfont.svg
-tyrian/fontawesome-webfont.ttf        node_modules/@gentoo/tyrian/dist/fontawesome-webfont.ttf
-tyrian/fontawesome-webfont.woff        node_modules/@gentoo/tyrian/dist/fontawesome-webfont.woff
-tyrian/fontawesome-webfont.woff2        node_modules/@gentoo/tyrian/dist/fontawesome-webfont.woff2
+tyrian/fontawesome-webfont.eot        ../@gentoo/tyrian/dist/fontawesome-webfont.eot
+tyrian/fontawesome-webfont.svg        ../@gentoo/tyrian/dist/fontawesome-webfont.svg
+tyrian/fontawesome-webfont.ttf        ../@gentoo/tyrian/dist/fontawesome-webfont.ttf
+tyrian/fontawesome-webfont.woff        ../@gentoo/tyrian/dist/fontawesome-webfont.woff
+tyrian/fontawesome-webfont.woff2        ../@gentoo/tyrian/dist/fontawesome-webfont.woff2
 
-tyrian/Bitter-Regular.woff        node_modules/@gentoo/tyrian/dist/Bitter-Regular.woff
-tyrian/OpenSans-Bold.woff        node_modules/@gentoo/tyrian/dist/OpenSans-Bold.woff
-tyrian/OpenSans-Italic.woff        node_modules/@gentoo/tyrian/dist/OpenSans-Italic.woff
-tyrian/OpenSans-BoldItalic.woff        node_modules/@gentoo/tyrian/dist/OpenSans-BoldItalic.woff
-tyrian/OpenSans-Regular.woff        node_modules/@gentoo/tyrian/dist/OpenSans-Regular.woff
+tyrian/Bitter-Regular.woff        ../@gentoo/tyrian/dist/Bitter-Regular.woff
+tyrian/OpenSans-Bold.woff        ../@gentoo/tyrian/dist/OpenSans-Bold.woff
+tyrian/OpenSans-Italic.woff        ../@gentoo/tyrian/dist/OpenSans-Italic.woff
+tyrian/OpenSans-BoldItalic.woff        ../@gentoo/tyrian/dist/OpenSans-BoldItalic.woff
+tyrian/OpenSans-Regular.woff        ../@gentoo/tyrian/dist/OpenSans-Regular.woff
 
-tyrian/jquery-3.3.slim.js        node_modules/@gentoo/tyrian/dist/jquery-3.3.slim.js
-tyrian/bootstrap.min.js        node_modules/@gentoo/tyrian/dist/bootstrap.min.js
-tyrian/popper.min.js        node_modules/@gentoo/tyrian/dist/popper.min.js
-tyrian/components/bootstrap-datepicker.min.js        node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js
+tyrian/jquery-3.3.slim.js        ../@gentoo/tyrian/dist/jquery-3.3.slim.js
+tyrian/bootstrap.min.js        ../@gentoo/tyrian/dist/bootstrap.min.js
+tyrian/popper.min.js        ../@gentoo/tyrian/dist/popper.min.js
+tyrian/components/bootstrap-datepicker.min.js        ../bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js
 
 tyrian/planet-tyrian.css        css/planet-tyrian.css
 tyrian/planet-tyrian.js        js/planet-tyrian.js
