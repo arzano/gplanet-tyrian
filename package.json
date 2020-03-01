@@ -16,6 +16,9 @@
     "gentoo",
     "tyrian"
   ],
+  "scripts": {
+        "prepare": "npm run dist"
+  }
   "dependencies": {
     "@gentoo/tyrian": "git+https://anongit.gentoo.org/git/sites/tyrian-theme.git",
     "bootstrap-datepicker": "^1.9.0"
