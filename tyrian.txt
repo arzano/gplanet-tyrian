@@ -4,6 +4,7 @@ index.html        tyrian.html.erb
 search.html        tyrian-search.html.erb
 contributors.html        tyrian-contributors.html.erb
 data.html        data.html.erb
+data.json        data.json.erb
 
 
 tyrian/tyrian.min.css        ../@gentoo/tyrian/dist/tyrian.min.css
@@ -32,6 +33,8 @@ tyrian/jquery-3.3.slim.js        ../@gentoo/tyrian/dist/jquery-3.3.slim.js
 tyrian/bootstrap.min.js        ../@gentoo/tyrian/dist/bootstrap.min.js
 tyrian/popper.min.js        ../@gentoo/tyrian/dist/popper.min.js
 tyrian/components/bootstrap-datepicker.min.js        ../bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js
+tyrian/components/lunr.min.js        ../lunr/lunr.min.js
 
 tyrian/planet-tyrian.css        css/planet-tyrian.css
 tyrian/planet-tyrian.js        js/planet-tyrian.js
+tyrian/planet-search.js        js/planet-search.js
