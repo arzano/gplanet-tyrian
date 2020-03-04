@@ -1,3 +1,4 @@
+<% require 'loofah' %>
 <html>
 <body>
 
@@ -37,9 +38,9 @@
           </div>
           <div class="text-muted" style="height:63px;overflow-y: hidden;">
             <% if item.content %>
-              <%= textify(item.content) %>
+              <%= Loofah.fragment(item.content).scrub!(:prune).to_s %>
             <% elsif item.summary %>
-              <%= textify(item.summary) %>
+              <%= Loofah.fragment(item.content).scrub!(:prune).to_s %>
             <% else %>
               -/-
             <% end %>
@@ -98,9 +99,9 @@
           </div>
 
           <% if item.content %>
-            <%= textify(item.content) %>
+            <%= Loofah.fragment(item.content).scrub!(:prune).to_s %>
           <% elsif item.summary %>
-            <%= textify(item.summary) %>
+            <%= Loofah.fragment(item.summary).scrub!(:prune).to_s %>
           <% else %>
             -/-
           <% end %>
