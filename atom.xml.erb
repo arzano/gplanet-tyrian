@@ -1,0 +1,62 @@
+<?xml version="1.0"?><% require 'loofah' %><% require 'cgi' %>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:planet="http://planet.intertwingly.net/" xmlns:indexing="urn:atom-extension:indexing" indexing:index="no"><access:restriction xmlns:access="http://www.bloglines.com/about/specs/fac-1.0" relationship="deny"/>
+<title>Planet Gentoo</title>
+<updated><%= site.items.latest.limit(50).first.published.strftime('%FT%T%:z ') %></updated>
+<generator uri="https://github.com/feedreader">Pluto</generator>
+  <author>
+    <name>Welcome to &lt;b&gt;Planet Gentoo&lt;/b&gt;, an aggregation of Gentoo-related weblog articles written by Gentoo developers. For a broader range of topics, you might be interested in &lt;a href="https://planet.gentoo.org/universe/"&gt;Gentoo Universe&lt;/a&gt;.</name>
+    <email>planet@gentoo.org</email>
+  </author>
+  <id>https://planet.gentoo.org/atom.xml</id>
+  <link href="https://planet.gentoo.org/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://planet.gentoo.org/" rel="alternate"/>
+
+<%
+  items = site.items.latest.limit(50)
+  ItemCursor.new(items).each do |item, new_date, new_feed|
+%>
+<% if item.feed.location == "planet" %>
+  <entry xml:lang="en-US">
+    <id><%= CGI::escapeHTML(item.url) %></id>
+    <link href="<%= CGI::escapeHTML(item.url) %>" rel="alternate" type="text/html" />
+    <title><%= CGI::escapeHTML(item.title) %></title>
+    <summary type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        <% if item.summary %>
+          <%= CGI::escapeHTML(Loofah.fragment(item.summary).scrub!(:prune).to_s) %>
+        <% else %>
+          -/-
+        <% end %>
+    </div>
+    </summary>
+
+    <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <% if item.content %>
+          <%= CGI::escapeHTML(Loofah.fragment(item.content).scrub!(:prune).to_s) %>
+        <% elsif item.summary %>
+          <%= CGI::escapeHTML(Loofah.fragment(item.summary).scrub!(:prune).to_s) %>
+        <% else %>
+          -/-
+        <% end %>
+    </div>
+    </content>
+
+    <author>
+      <%= CGI::escapeHTML(item.feed.title) %>
+    </author>
+    <source>
+      <id><%= CGI::escapeHTML(item.feed.url) %></id>
+      <link href="<%= CGI::escapeHTML(item.url) %>" rel="self" type="application/rss+xml" />
+      <link href="<%= CGI::escapeHTML(item.feed.url) %>" rel="alternate" type="text/html" />
+      <subtitle></subtitle>
+      <title><%= CGI::escapeHTML(item.title) %></title>
+      <updated><updated><%= item.published.strftime('%FT%T%:z ') %></updated></updated>
+    </source>
+
+  </entry>
+<% end %>
+<% end %>
+
+
+</feed>

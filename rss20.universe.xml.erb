@@ -1,0 +1,33 @@
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+<title>Planet Gentoo</title>
+<link>https://planet.gentoo.org</link>
+<language>en</language>
+<description>Planet Gentoo - https://planet.gentoo.org/</description>
+<%
+  require 'loofah'
+  require 'cgi'
+  items = site.items.latest.limit(50)
+  ItemCursor.new(items).each do |item, new_date, new_feed|
+%>
+  <item>
+    <title><%= CGI::escapeHTML(item.title) %></title>
+    <guid isPermaLink="false"><%= CGI::escapeHTML(item.guid) %></guid>
+    <link><%= CGI::escapeHTML(item.url) %></link>
+    <description>
+        <% if item.content %>
+          <%= CGI::escapeHTML(Loofah.fragment(item.content).scrub!(:prune).to_s) %>
+        <% elsif item.summary %>
+          <%= CGI::escapeHTML(Loofah.fragment(item.summary).scrub!(:prune).to_s) %>
+        <% else %>
+          -/-
+        <% end %>
+    </description>
+    <pubDate><%= item.published.strftime('%a, %d %b %Y %H:%M:%S %z') %></pubDate>
+    <dc:creator><%= CGI::escapeHTML(item.feed.title) %> (<%= CGI::escapeHTML(item.feed.key) %>)</dc:creator>
+  </item>
+<% end %>
+
+
+</channel>
+</rss>

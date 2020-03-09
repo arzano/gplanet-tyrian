@@ -5,6 +5,10 @@ search.html        tyrian-search.html.erb
 contributors.html        tyrian-contributors.html.erb
 data.html        data.html.erb
 data.json        data.json.erb
+rss20.xml        rss20.xml.erb
+universe/rss20.xml        rss20.universe.xml.erb
+atom.xml        atom.xml.erb
+universe/atom.xml        atom.universe.xml.erb
 
 
 tyrian/tyrian.min.css        ../@gentoo/tyrian/dist/tyrian.min.css
