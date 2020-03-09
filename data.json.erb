@@ -7,8 +7,8 @@
   %>
   {
     "title": <%= item.title.dump %>,
-    "author": <%= item.feed.title.dump %>,
-    "nickname": <%= item.feed.key.dump %>,
+    "author": <%= item.feed.author.dump %>,
+    "nickname": <%= item.feed.title.dump %>,
     "date": <%= item.published.strftime('%Y-%m-%d').dump %>,
     "scope": <%= item.feed.location.dump %>,
     "content": <% if item.content %><%= Loofah.fragment(item.content).scrub!(:prune).to_text.dump %><% elsif item.summary %><%= Loofah.fragment(item.summary).scrub!(:prune).to_text.dump %><% else %>"-/-"<% end %>

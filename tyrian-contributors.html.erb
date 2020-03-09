@@ -112,14 +112,14 @@
 
       <div class="page-header mb-4" style="border-bottom: none!important;padding-bottom: 10px!important;margin-top:0px!important;">
         <h1>Contributors <br>
-          <small> the gentoo universe aggregates feeds from <%= site.items.map { |i| i.feed }.uniq.length() %>
+          <small> the gentoo universe aggregates feeds from <%= site.items.map { |i| i.feed }.uniq { |feed| feed.author }.length() %>
             sources</small>
         </h1>
       </div>
 
       <div class="row equal">
 
-        <% site.items.map { |i| i.feed }.uniq.each do |feed| %>
+        <% site.items.map { |i| i.feed }.uniq { |feed| feed.author }.each do |feed| %>
 
           <div class="col-sm-4">
             <div class="card" style="height:90%;">
@@ -129,13 +129,13 @@
                     <img src="https://www.gravatar.com/avatar/<%= feed.avatar %>" style="border-radius: 6px;"/>
                   </div>
                   <div class="col-sm-8">
-                    <p class="mb-1"><b><%= feed.title %> (<%= feed.key %>)</b></p>
+                    <p class="mb-1"><b><%= feed.author %> (<%= feed.title %>)</b></p>
                     <div style="color:#777;">
                       <p style="margin-bottom:5px;"><%= feed.auto_url.gsub('https://', '').gsub('http://', '') %> </p>
                       <% if !feed.updated.nil? %>
                         <p style="margin-bottom:5px;">Last update: <%= feed.updated.strftime('%B %d') %></p>
                       <% end %>
-                      <p style="margin-bottom:5px;">Posts: <%= site.items.select { |i| i.feed.key == feed.key }.length() %></p>
+                      <p style="margin-bottom:5px;">Posts: <%= site.items.select { |i| i.feed.author == feed.author }.length() %></p>
                     </div>
 
                   </div>

@@ -134,6 +134,7 @@
         ItemCursor.new(items).each do |item, new_date, new_feed|
       %>
 
+        <% if item.feed.location == "planet" %>
         <% if new_date %>
           <div class="page-header article-view mt-5" data-date="<%= item.published.strftime('%Y-%m-%d') %>" data-location="<%= item.feed.location %>" style="border-bottom: none!important;padding-bottom: 0px!important;">
             <h1><%= item.published.strftime('%B %d') %>
@@ -152,7 +153,7 @@
                 </div>
                 <div class="mb-1 text-muted" style="">
                   <span style="margin-right:2px;">
-                    <%= item.feed.title %> (<%= item.feed.key %>)
+                    <%= item.feed.author %> (<%= item.feed.title %>)
                   </span>
                   <span style="">•</span>
                   <span style="font-weight: normal;margin-left:2px;">
@@ -176,7 +177,7 @@
         </div>
 
         <div class="row">
-          <div class="col-sm-11">
+          <div class="col-sm-12">
             <div class="card article-view mt-2" data-date="<%= item.published.strftime('%Y-%m-%d') %>" data-location="<%= item.feed.location %>" style="margin-top:20px;">
               <div class="card-body px-5">
                 <div class="row mb-3 mt-3">
@@ -233,6 +234,7 @@
           </div>
         </div>
 
+        <% end %><!-- each item -->
         <% end %><!-- each item -->
 
 
